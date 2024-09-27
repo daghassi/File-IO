@@ -9,21 +9,25 @@ public class ScoreTrakker {
     public void loadDataFile(String filename){
         FileReader reader = new FileReader(filename);
         Scanner in = new Scanner(reader);
-        PrintWriter out = new PrintWriter(filename);
         int lineNumber = 1;
         while (in.hasNextLine()) {
-            String line = in.nextLine();
-            out.println("/* " + lineNumber + " */ " + line);
+            String name = in.nextLine();
+            int score = in.nextInt();
+            students.add(new Student(name, score));
             lineNumber++;
         }
         out.close();
         return;
     }
     public void printInOrder(){
+        Collections.sort(students);
+        for(Student s : students){
+            System.out.println(s);
+        }
         return;
     }
     public void processFiles(){
-        loadDataFile("scores.txt");
+        loadDataFile("C:\\Users\\dagha\\Desktop\\csci2000\\CSCI306\\File-IO\\scores.txt");
         printInOrder();
     }
 

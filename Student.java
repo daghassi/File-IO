@@ -9,9 +9,6 @@ public class Student implements Comparable<Student>{
         this.score = score;
     }
 
-    public String getName() {
-        return name;
-    }
     @Override
     public int compareTo(Student otherStudent){
         return Integer.compare(this.score, otherStudent.score);
