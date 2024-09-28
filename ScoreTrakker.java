@@ -10,14 +10,14 @@ public class ScoreTrakker {
     private String[] files = {"scores.txt", "badscore.txt", "nofile.txt" };
 
     public void loadDataFile(String filename){
-        FileReader reader = null;
+    	FileReader reader = null;
 		try {
 			reader = new FileReader(filename);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("Can't open file: " + filename);
 		}
-        Scanner in = new Scanner(reader);
-        int lineNumber = 1;
+		Scanner in = new Scanner(reader);
+
         int score = 0;
         while (in.hasNextLine()) {
             String name = in.nextLine();
@@ -28,7 +28,6 @@ public class ScoreTrakker {
                 System.out.println("Incorrect format for " + name + " not a valid score: " + stringScore);
             }
             students.add(new Student(name, score));
-            lineNumber++;
         }
         in.close();
         return;
@@ -53,7 +52,7 @@ public class ScoreTrakker {
         try {
 			scoreTrakker.processFiles();
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
     }
 
