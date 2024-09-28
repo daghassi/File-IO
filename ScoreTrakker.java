@@ -10,10 +10,15 @@ public class ScoreTrakker {
     private String[] files = {"scores.txt", "badscore.txt", "nofile.txt" };
 
     public void loadDataFile(String filename){
-        FileReader reader = new FileReader(filename);
+        FileReader reader = null;
+		try {
+			reader = new FileReader(filename);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
         Scanner in = new Scanner(reader);
         int lineNumber = 1;
-        int score;
+        int score = 0;
         while (in.hasNextLine()) {
             String name = in.nextLine();
             String stringScore = in.nextLine();
@@ -25,7 +30,7 @@ public class ScoreTrakker {
             students.add(new Student(name, score));
             lineNumber++;
         }
-        out.close();
+        in.close();
         return;
     }
     public void printInOrder(){
@@ -35,13 +40,9 @@ public class ScoreTrakker {
         }
         return;
     }
-    public void processFiles(){
+    public void processFiles() throws FileNotFoundException{
         for(String file : files){
-            try {
-                loadDataFile(file);
-            }catch (FileNotFoundException e){
-                System.out.println("Cant open file: " + file);
-            }
+            loadDataFile(file);
         }
         loadDataFile("scores.txt");
         printInOrder();
@@ -49,7 +50,11 @@ public class ScoreTrakker {
 
     public static void main(String[] args) {
         ScoreTrakker scoreTrakker = new ScoreTrakker();
-        scoreTrakker.processFiles();
+        try {
+			scoreTrakker.processFiles();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
     }
 
 }
