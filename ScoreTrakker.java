@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class ScoreTrakker {
-    private ArrayList<Student> students;
+    private ArrayList<Student> students = new ArrayList<Student>();
     private String[] files = {"scores.txt", "badscore.txt", "nofile.txt" };
 
     public void loadDataFile(String filename){
