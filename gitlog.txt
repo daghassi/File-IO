@@ -1,0 +1,77 @@
+commit eabb24c4318f12328723f3332ce642f9cf3f3a2d
+Author: Sam Wells <swells1@mines.edu>
+Date:   Fri Sep 27 22:24:32 2024 -0600
+
+    Add null checking
+
+commit 6b7bfb8b0ea036e84bae378e20cccc556873f31c
+Author: Sam Wells <swells1@mines.edu>
+Date:   Fri Sep 27 22:09:52 2024 -0600
+
+    Added try/catches
+
+commit a08abd4502d9368e16a464c603e97295b5bb1bc6
+Author: Sam Wells <swells1@mines.edu>
+Date:   Fri Sep 27 21:47:37 2024 -0600
+
+    Instantiate students
+
+commit cb9692315da80b3a685666028e8a8a46c920ef37
+Author: daghassi <79544966+daghassi@users.noreply.github.com>
+Date:   Fri Sep 27 20:42:30 2024 -0600
+
+    Create badscore.txt
+
+commit 2e9f8b8a301e86825dfa2bd9a8c133180422fb68
+Author: daghassi <79544966+daghassi@users.noreply.github.com>
+Date:   Fri Sep 27 20:42:01 2024 -0600
+
+    Create scores.txt
+
+commit 29b4161adf9bc1534054271b18967e8041cca341
+Author: Sam Wells <swells1@mines.edu>
+Date:   Fri Sep 27 19:46:01 2024 -0600
+
+    Fixed errors
+
+commit c76fbe7094e3d40d9aff76b4fd0431f34c45861c
+Author: Sam Wells <swells1@mines.edu>
+Date:   Fri Sep 27 19:39:06 2024 -0600
+
+    Fixed student constructor
+
+commit 724e3d4708bbe2299da7c9afd67c41027beddf19
+Author: daghassi <79544966+daghassi@users.noreply.github.com>
+Date:   Fri Sep 27 18:26:41 2024 -0600
+
+    part 2 complete
+
+commit ae20905751a9e1c53886651500b7edfad2805589
+Author: daghassi <79544966+daghassi@users.noreply.github.com>
+Date:   Fri Sep 27 17:35:47 2024 -0600
+
+    part 1 complete
+
+commit 00b3e43af4ed10ee6c966de16f2791051ff7b454
+Author: daghassi <79544966+daghassi@users.noreply.github.com>
+Date:   Fri Sep 27 16:57:37 2024 -0600
+
+    created outline
+
+commit cb51df30b72510fdf8bd8441fc28c58c939725d1
+Author: daghassi <79544966+daghassi@users.noreply.github.com>
+Date:   Fri Sep 27 14:42:18 2024 -0600
+
+    test
+
+commit c3bc9e42b29a6c3a8ea2ada13a304b3f5203ad71
+Author: daghassi <79544966+daghassi@users.noreply.github.com>
+Date:   Fri Sep 27 12:47:46 2024 -0600
+
+    Add files via upload
+
+commit 0614ec42afeafa8855774b40780df21f7ff60d00
+Author: daghassi <79544966+daghassi@users.noreply.github.com>
+Date:   Fri Sep 27 12:19:43 2024 -0600
+
+    Initial commit
