@@ -16,20 +16,27 @@ public class ScoreTrakker {
 		} catch (FileNotFoundException e) {
 			System.out.println("Can't open file: " + filename);
 		}
-		Scanner in = new Scanner(reader);
+		
+		Scanner in = null;
+		
+		if (reader != null) {
+			in = new Scanner(reader);
+		}
 
         int score = 0;
-        while (in.hasNextLine()) {
-            String name = in.nextLine();
-            String stringScore = in.nextLine();
-            try {
-                score = Integer.parseInt(stringScore);
-            } catch(NumberFormatException e){
-                System.out.println("Incorrect format for " + name + " not a valid score: " + stringScore);
-            }
-            students.add(new Student(name, score));
+        if (in != null) {
+	        while (in.hasNextLine()) {
+	            String name = in.nextLine();
+	            String stringScore = in.nextLine();
+	            try {
+	                score = Integer.parseInt(stringScore);
+	            } catch(NumberFormatException e){
+	                System.out.println("Incorrect format for " + name + " not a valid score: " + stringScore);
+	            }
+	            students.add(new Student(name, score));
+	        }
+	        in.close();
         }
-        in.close();
         return;
     }
     public void printInOrder(){
