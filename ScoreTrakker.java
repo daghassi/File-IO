@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class ScoreTrakker {
     private ArrayList<Student> students;
+    private String[] files = {"scores.txt", "badscore.txt", "nofile.txt" };
 
     public void loadDataFile(String filename){
         FileReader reader = new FileReader(filename);
@@ -12,7 +13,12 @@ public class ScoreTrakker {
         int lineNumber = 1;
         while (in.hasNextLine()) {
             String name = in.nextLine();
-            int score = in.nextInt();
+            String stringScore = in.nextline();
+            try {
+                int score = Integer.parseInt(stringScore);
+            } catch(NumberFormatException e){
+                System.out.println("Incorrect format for " + name + " not a valid score: " + stringScore);
+            }
             students.add(new Student(name, score));
             lineNumber++;
         }
@@ -27,7 +33,14 @@ public class ScoreTrakker {
         return;
     }
     public void processFiles(){
-        loadDataFile("C:\\Users\\dagha\\Desktop\\csci2000\\CSCI306\\File-IO\\scores.txt");
+        for(String file : files){
+            try {
+                loadDataFile(file);
+            }catch (FileNotFoundException e){
+                System.out.println("Cant open file: " + file);
+            }
+        }
+        loadDataFile("scores.txt");
         printInOrder();
     }
 
