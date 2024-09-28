@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+
 
 public class Student implements Comparable<Student>{
     String name;
     int score;
 
-    public class(String name, int score){
+    public Student(String name, int score){
         this.name = name;
         this.score = score;
     }

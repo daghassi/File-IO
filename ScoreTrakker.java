@@ -1,6 +1,8 @@
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class ScoreTrakker {
@@ -11,11 +13,12 @@ public class ScoreTrakker {
         FileReader reader = new FileReader(filename);
         Scanner in = new Scanner(reader);
         int lineNumber = 1;
+        int score;
         while (in.hasNextLine()) {
             String name = in.nextLine();
-            String stringScore = in.nextline();
+            String stringScore = in.nextLine();
             try {
-                int score = Integer.parseInt(stringScore);
+                score = Integer.parseInt(stringScore);
             } catch(NumberFormatException e){
                 System.out.println("Incorrect format for " + name + " not a valid score: " + stringScore);
             }
